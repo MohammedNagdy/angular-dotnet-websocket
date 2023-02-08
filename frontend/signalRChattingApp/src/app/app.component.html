@@ -1,0 +1,13 @@
+<div class="chat-box">
+  <select #group class="chat-groups" (click)="onChoose()">
+    <option  class="group" value="1" >1</option>
+    <option  class="group" value="2" >2</option>
+  </select>
+
+
+  <h3 *ngFor="let m of messages">{{m}}</h3>
+  <form  #chatForm>
+    <input #message class="message" name="message" placeholder="Send a message">
+    <button (click)="onSend()">Send</button>
+  </form>
+</div>
